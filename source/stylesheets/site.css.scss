@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "normalize";
+@import "clearfix";
 
 body {
   background: #ECC561;
@@ -38,6 +39,32 @@ h1 {
       background: rgba(0,0,0,0.2);
       color: white;
       transition: all 0.15s linear;
+    }
+  }
+}
+
+.test-header {
+  top: 0;
+  background: rgba(31, 31, 29, 0.85);
+  position: fixed;
+  width: 100%;
+  @include clearfix();
+
+  .left{
+    float: left;
+    p{
+      font-size: 15px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+  }
+  .right{
+    float: right;
+    li{
+      color: #ffffff;
+      list-style: none;
+      float: left;
+      margin-right: 30px;
     }
   }
 }
