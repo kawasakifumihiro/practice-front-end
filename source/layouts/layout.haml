@@ -10,6 +10,16 @@
 
     = stylesheet_link_tag :site
   %body{:class => page_classes}
+    %header.test-header
+      .left
+        %p　TEST
+      .right
+        %ul
+          %li.right-item HOME
+          %li.right-item ABOUT
+          %li.right-item INFO
+          %li.right-item MAP
+
     = yield
 
     = javascript_include_tag "jquery-1.12.4.min", "all"
